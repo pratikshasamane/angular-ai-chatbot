@@ -1,59 +1,100 @@
-# QuoteAi
+# 🤖 Angular AI Chatbot
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+A modern AI-powered chatbot built with Angular 17+ and Groq LLM API.
 
-## Development server
+## 🚀 Live Demo
 
-To start a local development server, run:
+[View Live App](YOUR_VERCEL_URL_HERE)
 
-```bash
-ng serve
-```
+## ✨ Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- 💬 Real-time AI chat using Groq (Llama 3.3)
+- 📜 Chat history with beautiful UI
+- 🔄 Clear chat functionality
+- ⚡ Built with modern Angular (Standalone components)
+- 🎯 Reactive programming with RxJS
+- 🔢 Angular Signals demo
 
-## Code scaffolding
+## 🛠️ Tech Stack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Technology      | Usage                |
+| --------------- | -------------------- |
+| Angular 17+     | Frontend Framework   |
+| Groq API        | AI Language Model    |
+| RxJS            | Reactive Programming |
+| Angular Signals | State Management     |
+| TypeScript      | Programming Language |
 
-```bash
-ng generate component component-name
-```
+## 📦 Installation
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Prerequisites
 
-```bash
-ng generate --help
-```
+- Node.js 18+
+- Angular CLI
+- Groq API Key (free at console.groq.com)
 
-## Building
+### Steps
 
-To build the project run:
+1. Clone the repository
+   \`\`\`bash
+   git clone https://github.com/YOUR_USERNAME/angular-ai-chatbot.git
+   cd angular-ai-chatbot
+   \`\`\`
 
-```bash
-ng build
-```
+2. Install dependencies
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. Add your API key
+   \`\`\`bash
 
-## Running unit tests
+   # Create environment file
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+   # src/environments/environment.ts
 
-```bash
-ng test
-```
+   export const environment = {
+   production: false,
+   geminiApiKey: 'YOUR_GROQ_API_KEY'
+   };
+   \`\`\`
 
-## Running end-to-end tests
+4. Run the app
+   \`\`\`bash
+   ng serve
+   \`\`\`
 
-For end-to-end (e2e) testing, run:
+5. Open browser at `http://localhost:4200`
 
-```bash
-ng e2e
-```
+## 📁 Project Structure
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+\`\`\`
+src/
+├── app/
+│ ├── components/
+│ │ ├── ai-chat/ # AI Chatbot component
+│ │ └── quote/ # Quote card component
+| | └──Welcome/ # Welcome component
+│ ├── services/
+│ │ ├── ai.service.ts # Groq API integration
+│ └── environment/
+│ └── environment.ts # API configuration
+\`\`\`
 
-## Additional Resources
+## 🔑 Environment Setup
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Create `src/environments/environment.ts`:
+\`\`\`typescript
+export const environment = {
+production: false,
+geminiApiKey: 'YOUR_GROQ_API_KEY_HERE'
+};
+\`\`\`
+
+## 👩‍💻 Developer
+
+Built with ❤️ by Pratiksha
+
+## 📄 License
+
+MIT License
