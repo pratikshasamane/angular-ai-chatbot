@@ -6,7 +6,9 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
-
+  // 👇 Temporarily check if key exists
+  console.log('API KEY EXISTS:', !!process.env.GROQ_API_KEY);
+  console.log('API KEY LENGTH:', process.env.GROQ_API_KEY?.length);
   try {
     const { question } = req.body;
 
