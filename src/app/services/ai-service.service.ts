@@ -7,21 +7,23 @@ import { environment } from '../../environment/enviornment';
   providedIn: 'root',
 })
 export class AiService {
-  private apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
+  // private apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
+  private apiUrl = 'api/chat';
 
   constructor(private http: HttpClient) {}
 
   askQuestion(prompt: string): Observable<any> {
     const headers = new HttpHeaders({
-      Authorization: `Bearer ${environment.geminiAPIKey}`,
+      // Authorization: `Bearer ${environment.geminiAPIKey}`,
       'Content-Type': 'application/json',
     });
 
-    const body = {
-      model: 'llama-3.3-70b-versatile',
-      messages: [{ role: 'user', content: prompt }],
-    };
+    // const body = {
+    //   model: 'llama-3.3-70b-versatile',
+    //   messages: [{ role: 'user', content: prompt }],
+    // };
 
+    const body = { question: prompt };
     return this.http.post<any>(this.apiUrl, body, { headers });
   }
 }
